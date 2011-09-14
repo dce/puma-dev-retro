@@ -69,16 +69,23 @@ PUMA Dev Retrospective
 
 !SLIDE
 
-### PM difficulties
+### PM Difficulties
 
 !SLIDE
 
-### 40 vs. 32 hr. week
+### 40 vs. 32 Hr. Week
 
 !SLIDE
 
-### Cross-office communication
+### Cross-Office Communication
 
 !SLIDE
 
-### Release planning
+### Release Planning
+
+!SLIDE
+
+## Thanks!
+
+  * <https://github.com/dce/puma-dev-retro>
+  * <https://github.com/nakajima/slidedown>
