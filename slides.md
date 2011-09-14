@@ -1,9 +1,16 @@
-PUMA Dev Lunch (9/15)
-=====================
+PUMA Dev Retrospective
+======================
 
 !SLIDE
 
-## Tips
+## PUMA Dev Retro
+
+  1. Tips & Techniques
+  2. Larger Issues/Lessons
+
+!SLIDE
+
+## 1. Tips
 
 !SLIDE
 
@@ -58,7 +65,7 @@ PUMA Dev Lunch (9/15)
 
 !SLIDE
 
-## Larger Issues/Lessons
+## 2. Larger Issues/Lessons
 
 !SLIDE
 
