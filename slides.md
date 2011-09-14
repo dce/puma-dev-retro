@@ -23,9 +23,7 @@ PUMA Dev Lunch (9/15)
 
 !SLIDE
 
-### [git cherry][cherry]
-
-* * *
+### [`git cherry`][cherry]
 
     + 497034f2 Listener.new now accepts a hash of options
     - 2d0333ff cache the absolute images path for growl messages
@@ -42,8 +40,6 @@ PUMA Dev Lunch (9/15)
 !SLIDE
 
 ### [`.presence`][presence]
-
-* * *
 
     title.present? ? title : label
 
