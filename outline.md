@@ -24,7 +24,7 @@ PUMA Dev Retrospective
 
 [rlike]: http://dev.mysql.com/doc/refman/5.0/en/regexp.html
 
-### [`git cherry`][cherry]
+### [git cherry][cherry]
 
     + 497034f2 Listener.new now accepts a hash of options
     - 2d0333ff cache the absolute images path for growl messages
@@ -36,7 +36,7 @@ PUMA Dev Retrospective
 
 [preflight]: http://www.viget.com/extend/testing-your-codes-text/
 
-### [`.presence`][presence]
+### [.presence][presence]
 
     title.present? ? title : label
 
