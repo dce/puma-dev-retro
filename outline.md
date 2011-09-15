@@ -168,6 +168,18 @@ PUMA Dev Retrospective
 
 [cherry]: http://www.kernel.org/pub/software/scm/git/docs/git-cherry.html
 
+### [git log --oneline --decorate][mislav]
+
+    82bf5fb (HEAD, transmobilizer) Translator: basic translation middleware
+    3fec5fb (origin/staging, origin/production, origin/master, origin/HEAD, staging, production, master)
+    7211f57 Football: Added Sergio Panel, Resolves #2708
+    376d7eb Puma.com: Fixed 'Like' button comment window in modals. Resolves #2702
+    e6c7b19 Products: Updated GA tracking, Resolves #2670
+    9ebeed6 Products: Updated data-track-trigger firing to include available products, Addresses #2670
+    fe18621 PUMA.com: store-specific checkin feeds (fix #2696)`
+
+[mislav]: http://mislav.uniqpath.com/2010/07/git-tips/
+
 ### Test Macros
 
     class Admin::AmbassadorsControllerTest < ActionController::TestCase
@@ -208,18 +220,6 @@ PUMA Dev Retrospective
     title.presence || label
 
 [presence]: http://rubyquicktips.com/post/9247085311/directly-access-an-object-if-its-present
-
-### [git log --oneline --decorate][mislav]
-
-    82bf5fb (HEAD, transmobilizer) Translator: basic translation middleware
-    3fec5fb (origin/staging, origin/production, origin/master, origin/HEAD, staging, production, master)
-    7211f57 Football: Added Sergio Panel, Resolves #2708
-    376d7eb Puma.com: Fixed 'Like' button comment window in modals. Resolves #2702
-    e6c7b19 Products: Updated GA tracking, Resolves #2670
-    9ebeed6 Products: Updated data-track-trigger firing to include available products, Addresses #2670
-    fe18621 PUMA.com: store-specific checkin feeds (fix #2696)`
-
-[mislav]: http://mislav.uniqpath.com/2010/07/git-tips/
 
 ### Gems (Obscure)
 
