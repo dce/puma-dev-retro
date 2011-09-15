@@ -13,11 +13,42 @@ PUMA Dev Retrospective
 
 ## 1. Architecture
 
-### Typus
+### [Typus][]
+
+[typus]: https://github.com/typus/typus
 
 ### Relationship system
 
+    class Event < ActiveRecord::Base
+      relate_to :media_item, :product
+    end
+
+    # @event.related_media_items
+
 ### Modules
+
+    class Event < ActiveRecord::Base
+      include Locatable
+      include Address
+      include GenerateSlug
+      include TrackUpdates
+      include Commentable
+      include Publishable
+      include Featurable
+      include Excludable
+      include Taggable
+
+      extend Related
+      extend RelatedToStore
+      extend Sanitizer
+      extend Geotaggable
+    end
+
+### Middlewares
+
+  * Redirector
+  * Mobilizer
+  * Translator
 
 ### Integration/Stack Testing
 
@@ -138,6 +169,8 @@ PUMA Dev Retrospective
 ### Bad Code
 
 ### Long Engagement
+
+### Conclusion
 
 ## Thanks!
 
