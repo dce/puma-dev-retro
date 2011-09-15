@@ -13,6 +13,22 @@ PUMA Dev Retrospective
 
 ## 1. Architecture
 
+### Overview
+
+  * Content management system
+  * Rails 2.3.14
+  * MySQL/Redis/Solr
+  * Powers:
+    * [PUMA.com][]
+    * 10 category sites ([Running][], [Rugby][])
+    * 5 landing pages ([Kids][], [UNDFTD][])
+
+[puma.com]: http://www.puma.com/
+[running]: http://www.puma.com/running
+[rugby]: http://www.puma.com/rugby
+[kids]: http://www.puma.com/kids
+[undftd]: http://www.puma.com/clyde
+
 ### [Typus][]
 
   * [Generators vs. Frameworks][hn]
@@ -238,15 +254,15 @@ PUMA Dev Retrospective
 
 ### Cross-Office Communication
 
-### Sysadmin/Deploy Situation
-
 ### Ramping Up New Devs
+
+### Sysadmin/Deploys
 
 ### Long Engagement
 
   * Growth
   * Second chances
-  * Creative control
+  * Burnout
 
 ### Conclusion
 
