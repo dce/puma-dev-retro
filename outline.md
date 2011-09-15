@@ -1,14 +1,14 @@
 PUMA Dev Retrospective
 ======================
 
+[github.com/dce/puma-dev-retro][github]
+
+[github]: https://github.com/dce/puma-dev-retro
+
 ## PUMA Dev Retro
 
   1. Tips &amp; Techniques
   2. Larger Issues/Lessons
-
-## [github.com/dce/puma-dev-retro][github]
-
-[github]: https://github.com/dce/puma-dev-retro
 
 ## 1. Tips
 
