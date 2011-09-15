@@ -90,13 +90,6 @@ PUMA Dev Retrospective
       end
     end
 
-### Akamai
-
-  * Geolocation
-  * Cache busting
-
-## 2. Tips
-
 ### [Redis][]
 
   * Fragment cache
@@ -104,6 +97,31 @@ PUMA Dev Retrospective
 
 [redis]: http://redis.io/
 [cachebar]: https://github.com/vigetlabs/cachebar
+
+### Akamai
+
+  * Geolocation
+  * Cache busting
+
+### Gems
+
+  * [Rails](https://github.com/rails/rails) (2.3.14)
+  * [Sunspot](http://outoftime.github.com/sunspot)
+  * [SearchLogic](http://github.com/binarylogic/searchlogic)
+  * [AuthLogic](http://github.com/binarylogic/authlogic)
+  * [Paperclip](https://github.com/thoughtbot/paperclip)
+  * [Geokit](http://github.com/andre/geokit-gem)
+  * [redis-namespace](https://github.com/defunkt/redis-namespace)
+
+### Gems (Testing)
+
+  * [Shoulda](https://github.com/thoughtbot/shoulda)
+  * [Mocha](http://mocha.rubyforge.org/)
+  * [FactoryGirl](https://github.com/thoughtbot/factory_girl)
+  * [FakeWeb](http://github.com/chrisk/fakeweb)
+  * [Rack::Test](http://github.com/brynary/rack-test)
+
+## 2. Tips
 
 ### [RLIKE][]
 
@@ -133,8 +151,6 @@ PUMA Dev Retrospective
     + e4406858 rename Listener#run to #start
 
 [cherry]: http://www.kernel.org/pub/software/scm/git/docs/git-cherry.html
-
-### Learning from Mistakes
 
 ### Test Macros
 
@@ -189,23 +205,6 @@ PUMA Dev Retrospective
 
 [mislav]: http://mislav.uniqpath.com/2010/07/git-tips/
 
-### Gems
-
-  * [Sunspot](http://outoftime.github.com/sunspot)
-  * [SearchLogic](http://github.com/binarylogic/searchlogic)
-  * [AuthLogic](http://github.com/binarylogic/authlogic)
-  * [Paperclip](https://github.com/thoughtbot/paperclip)
-  * [Geokit](http://github.com/andre/geokit-gem)
-  * [redis-namespace](https://github.com/defunkt/redis-namespace)
-
-### Gems (Testing)
-
-  * [Shoulda](https://github.com/thoughtbot/shoulda)
-  * [Mocha](http://mocha.rubyforge.org/)
-  * [FactoryGirl](https://github.com/thoughtbot/factory_girl)
-  * [FakeWeb](http://github.com/chrisk/fakeweb)
-  * [Rack::Test](http://github.com/brynary/rack-test)
-
 ### Gems (Obscure)
 
   * [Carmen](https://github.com/jim/carmen)
@@ -215,12 +214,6 @@ PUMA Dev Retrospective
   * [FrontCompiler](https://github.com/MadRabbit/frontcompiler)
 
 ## 3. Larger Lessons &amp; Issues
-
-### PM Turnover
-
-### 40 vs. 32 Hr. Week
-
-### Cross-Office Communication
 
 ### Release Planning
 
@@ -239,13 +232,21 @@ PUMA Dev Retrospective
       * Feeds
       * Facebook integration
 
+### 40 vs. 32 Hr. Week
+
+### PM Turnover
+
+### Cross-Office Communication
+
 ### Sysadmin/Deploy Situation
 
 ### Ramping Up New Devs
 
-### Bad Code
-
 ### Long Engagement
+
+  * Growth
+  * Second chances
+  * Creative control
 
 ### Conclusion
 
