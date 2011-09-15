@@ -6,6 +6,10 @@ PUMA Dev Retrospective
   1. Tips &amp; Techniques
   2. Larger Issues/Lessons
 
+## [github.com/dce/puma-dev-retro][github]
+
+[github]: https://github.com/dce/puma-dev-retro
+
 ## 1. Tips
 
 ### [Redis][]
@@ -47,9 +51,34 @@ PUMA Dev Retrospective
   * master/staging/production/etc.
   * `git log --oneline --decorate`
 
+### Gems
+
+  * [Sunspot](http://outoftime.github.com/sunspot)
+  * [SearchLogic](http://github.com/binarylogic/searchlogic)
+  * [AuthLogic](http://github.com/binarylogic/authlogic)
+  * [Paperclip](https://github.com/thoughtbot/paperclip)
+  * [Geokit](http://github.com/andre/geokit-gem)
+  * [redis-namespace](https://github.com/defunkt/redis-namespace)
+
+### Gems (Testing)
+
+  * [Shoulda](https://github.com/thoughtbot/shoulda)
+  * [Mocha](http://mocha.rubyforge.org/)
+  * [FactoryGirl](https://github.com/thoughtbot/factory_girl)
+  * [FakeWeb](http://github.com/chrisk/fakeweb)
+  * [Rack::Test](http://github.com/brynary/rack-test)
+
+### Gems (Obscure)
+
+  * [Carmen](https://github.com/jim/carmen)
+  * [Money](https://github.com/RubyMoney/money)
+  * [Phone](http://github.com/carr/phone)
+  * [RoutingFilter](http://github.com/svenfuchs/routing-filter)
+  * [FrontCompiler](https://github.com/MadRabbit/frontcompiler)
+
 ## 2. Larger Issues/Lessons
 
-### PM Difficulties
+### PM Turnover
 
 ### 40 vs. 32 Hr. Week
 
@@ -64,13 +93,13 @@ PUMA Dev Retrospective
 
 * * *
 
-Sysadmin/Deploy Situation
-Burnout
-Ramping Up New Devs
-Bad Code
-Long Engagement
-Modules
-Test Macros
-Integration/Stack Testing
-Typus
-Random Gems
+  * Sysadmin/Deploy Situation
+  * Burnout
+  * Ramping Up New Devs
+  * Bad Code
+  * Long Engagement
+  * Modules
+  * Test Macros
+  * Integration/Stack Testing
+  * Typus
+  * Akamai
