@@ -9,21 +9,25 @@ PUMA Dev Retrospective
 
   1. Architecture
   2. Tips &amp; Techniques
-  3. Larger Issues/Lessons
+  3. Larger Lessons &amp; Issues
 
 ## 1. Architecture
 
 ### [Typus][]
 
+  * [Generators vs. Frameworks][hn]
+
 [typus]: https://github.com/typus/typus
+[hn]: http://news.ycombinator.com/item?id=2996781
 
 ### Relationship system
 
     class Event < ActiveRecord::Base
       relate_to :media_item, :product
+      # ...
     end
 
-    # @event.related_media_items
+    @event.related_media_items
 
 ### Modules
 
@@ -42,7 +46,21 @@ PUMA Dev Retrospective
       extend RelatedToStore
       extend Sanitizer
       extend Geotaggable
+
+      # ...
     end
+
+### Branches
+
+  * master/staging/production
+  * feature branches
+  * puma-dot-com
+
+### Deployment
+
+  * Integration (x2, one continuous)
+  * Staging (PUMA)
+  * Production (PUMA)
 
 ### Middlewares
 
@@ -51,6 +69,26 @@ PUMA Dev Retrospective
   * Translator
 
 ### Integration/Stack Testing
+
+    class RedirectorIntegrationTest < ActiveSupport::StackTestCase
+      context "The Redirector middleware" do
+        context "with a general redirect rule" do
+          setup do
+            Factory(:active_redirect_rule, :pattern => '^/login', :destination => '/v2/login')
+          end
+
+          should "redirect if the path matches" do
+            get '/login'
+            assert_redirected_to '/v2/login'
+          end
+
+          should "not redirect if the path does not match" do
+            get '/'
+            assert_not_redirected
+          end
+        end
+      end
+    end
 
 ### Akamai
 
@@ -67,7 +105,24 @@ PUMA Dev Retrospective
 [redis]: http://redis.io/
 [cachebar]: https://github.com/vigetlabs/cachebar
 
-### [RLIKE][] 
+### [RLIKE][]
+
+    class MediaItem < ActiveRecord::Base
+      named_scope :brightcove, :conditions => "identifier RLIKE '^[0-9]+$'"
+      # ...
+    end
+
+[rlike]: http://dev.mysql.com/doc/refman/5.0/en/regexp.html
+
+### [RLIKE][]
+
+    def general_clause
+      <<-SQL
+        countries.code IS NULL AND
+        :request_path RLIKE redirect_rules.pattern AND
+        #{exception_clause}
+      SQL
+    end
 
 [rlike]: http://dev.mysql.com/doc/refman/5.0/en/regexp.html
 
@@ -122,10 +177,17 @@ PUMA Dev Retrospective
 
 [presence]: http://rubyquicktips.com/post/9247085311/directly-access-an-object-if-its-present
 
-### Branches
+### [git log --oneline --decorate][mislav]
 
-  * master/staging/production/etc.
-  * `git log --oneline --decorate`
+    82bf5fb (HEAD, transmobilizer) Translator: basic translation middleware
+    3fec5fb (origin/staging, origin/production, origin/master, origin/HEAD, staging, production, master)
+    7211f57 Football: Added Sergio Panel, Resolves #2708
+    376d7eb Puma.com: Fixed 'Like' button comment window in modals. Resolves #2702
+    e6c7b19 Products: Updated GA tracking, Resolves #2670
+    9ebeed6 Products: Updated data-track-trigger firing to include available products, Addresses #2670
+    fe18621 PUMA.com: store-specific checkin feeds (fix #2696)`
+
+[mislav]: http://mislav.uniqpath.com/2010/07/git-tips/
 
 ### Gems
 
@@ -152,7 +214,7 @@ PUMA Dev Retrospective
   * [RoutingFilter](http://github.com/svenfuchs/routing-filter)
   * [FrontCompiler](https://github.com/MadRabbit/frontcompiler)
 
-## 3. Larger Issues/Lessons
+## 3. Larger Lessons &amp; Issues
 
 ### PM Turnover
 
@@ -161,6 +223,21 @@ PUMA Dev Retrospective
 ### Cross-Office Communication
 
 ### Release Planning
+
+    ## Iteration 3 *(March 21-25)*
+
+      * Search
+      * Region-specific panel uploader
+      * Promotions
+      * Tags acting globally
+
+    **Note:** Buildout starts; David out Monday; David and Carolyn in Boston Thu-Fri
+
+    ## Iteration 4 *(March 28-April 1)*
+
+      * Brightcove integration
+      * Feeds
+      * Facebook integration
 
 ### Sysadmin/Deploy Situation
 
