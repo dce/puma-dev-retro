@@ -7,10 +7,26 @@ PUMA Dev Retrospective
 
 ## PUMA Dev Retro
 
-  1. Tips &amp; Techniques
-  2. Larger Issues/Lessons
+  1. Architecture
+  2. Tips &amp; Techniques
+  3. Larger Issues/Lessons
 
-## 1. Tips
+## 1. Architecture
+
+### Typus
+
+### Relationship system
+
+### Modules
+
+### Integration/Stack Testing
+
+### Akamai
+
+  * Geolocation
+  * Cache busting
+
+## 2. Tips
 
 ### [Redis][]
 
@@ -32,7 +48,36 @@ PUMA Dev Retrospective
 
 [cherry]: http://www.kernel.org/pub/software/scm/git/docs/git-cherry.html
 
+### Learning from Mistakes
+
+### Test Macros
+
+    class Admin::AmbassadorsControllerTest < ActionController::TestCase
+      should_render_default_views
+    end
+
+### Test Macros (Con't)
+
+    if actions.include?("update")
+      context "on GET to #edit" do
+        setup do
+          get :edit, :id => @resource.id
+        end
+
+        should_respond_with :success
+      end
+    end
+
 ### [Preflight Tasks][preflight]
+
+    task :img do
+      if_files_include? "<img src=\"/images", :in => :app do |paths|
+        puts "\ERROR: Found <img> tags referencing '/images' in these files:\n\n"
+        paths.each {|path| puts " - #{path}" }
+        puts "\nThese should be replaced with 'image_tag' to ensure they still work in production w/ asset hosts.\n"
+        exit 1
+      end
+    end
 
 [preflight]: http://www.viget.com/extend/testing-your-codes-text/
 
@@ -76,7 +121,7 @@ PUMA Dev Retrospective
   * [RoutingFilter](http://github.com/svenfuchs/routing-filter)
   * [FrontCompiler](https://github.com/MadRabbit/frontcompiler)
 
-## 2. Larger Issues/Lessons
+## 3. Larger Issues/Lessons
 
 ### PM Turnover
 
@@ -86,20 +131,15 @@ PUMA Dev Retrospective
 
 ### Release Planning
 
+### Sysadmin/Deploy Situation
+
+### Ramping Up New Devs
+
+### Bad Code
+
+### Long Engagement
+
 ## Thanks!
 
   * <https://github.com/dce/puma-dev-retro>
   * <https://github.com/nakajima/slidedown>
-
-* * *
-
-  * Sysadmin/Deploy Situation
-  * Burnout
-  * Ramping Up New Devs
-  * Bad Code
-  * Long Engagement
-  * Modules
-  * Test Macros
-  * Integration/Stack Testing
-  * Typus
-  * Akamai
