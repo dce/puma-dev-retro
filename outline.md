@@ -1,18 +1,12 @@
 PUMA Dev Retrospective
 ======================
 
-!SLIDE
-
 ## PUMA Dev Retro
 
-  1. Tips & Techniques
+  1. Tips &amp; Techniques
   2. Larger Issues/Lessons
 
-!SLIDE
-
 ## 1. Tips
-
-!SLIDE
 
 ### [Redis][]
 
@@ -22,13 +16,9 @@ PUMA Dev Retrospective
 [redis]: http://redis.io/
 [cachebar]: https://github.com/vigetlabs/cachebar
 
-!SLIDE
-
 ### [RLIKE][] 
 
 [rlike]: http://dev.mysql.com/doc/refman/5.0/en/regexp.html
-
-!SLIDE
 
 ### [`git cherry`][cherry]
 
@@ -38,13 +28,9 @@ PUMA Dev Retrospective
 
 [cherry]: http://www.kernel.org/pub/software/scm/git/docs/git-cherry.html
 
-!SLIDE
-
 ### [Preflight Tasks][preflight]
 
 [preflight]: http://www.viget.com/extend/testing-your-codes-text/
-
-!SLIDE
 
 ### [`.presence`][presence]
 
@@ -56,36 +42,35 @@ PUMA Dev Retrospective
 
 [presence]: http://rubyquicktips.com/post/9247085311/directly-access-an-object-if-its-present
 
-!SLIDE
-
 ### Branches
 
   * master/staging/production/etc.
   * `git log --oneline --decorate`
 
-!SLIDE
-
 ## 2. Larger Issues/Lessons
-
-!SLIDE
 
 ### PM Difficulties
 
-!SLIDE
-
 ### 40 vs. 32 Hr. Week
-
-!SLIDE
 
 ### Cross-Office Communication
 
-!SLIDE
-
 ### Release Planning
-
-!SLIDE
 
 ## Thanks!
 
   * <https://github.com/dce/puma-dev-retro>
   * <https://github.com/nakajima/slidedown>
+
+* * *
+
+Sysadmin/Deploy Situation
+Burnout
+Ramping Up New Devs
+Bad Code
+Long Engagement
+Modules
+Test Macros
+Integration/Stack Testing
+Typus
+Random Gems
